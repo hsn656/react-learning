@@ -10,14 +10,14 @@ const Counter = ({ number, setNumber }) => {
 
   return (
     <div className="my-3">
-      <div class="btn-group">
-        <button onClick={decrement} type="button" class="btn btn-info ">
+      <div className="btn-group">
+        <button onClick={decrement} type="button" className="btn btn-info ">
           -
         </button>
-        <button type="button" class="btn btn-primary">
+        <button type="button" className="btn btn-primary">
           {number}
         </button>
-        <button onClick={increment} type="button" class="btn btn-info ">
+        <button onClick={increment} type="button" className="btn btn-info ">
           +
         </button>
       </div>
