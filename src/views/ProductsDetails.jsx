@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ReactStars from "react-rating-stars-component";
 import {
   Button,
   Card,
@@ -30,6 +31,12 @@ const ProductDetails = () => {
       />
       <Card.Body>
         <Card.Title className="h6 text-center">{product.title}</Card.Title>
+        <ReactStars
+          classNames="m-auto"
+          size={30}
+          value={product.rating.rate}
+          edit={false}
+        />
         <Card.Text
           title={product.description}
           className="text-secondary text-center"

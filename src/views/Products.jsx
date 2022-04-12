@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Card, Col, Row, Spinner } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ReactStars from "react-rating-stars-component";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -27,6 +28,12 @@ const Products = () => {
               <Card.Title className="h6 text-center">
                 {prd.title.slice(0, 10)}
               </Card.Title>
+              <ReactStars
+                classNames="m-auto"
+                size={30}
+                value={prd.rating.rate}
+                edit={false}
+              />
               <Card.Text
                 title={prd.description}
                 className="text-secondary text-center"
