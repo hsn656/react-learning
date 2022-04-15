@@ -1,5 +1,5 @@
-import { createStore, combineReducers } from "redux";
-import { counterReducer, toDosReducer } from "./reducers";
+import { createStore } from "redux";
+import reducers from "./reducers";
 
 export const initialState = {
   todos: [],
@@ -7,10 +7,6 @@ export const initialState = {
 };
 
 // error due to circular dependencies
-const reducers = combineReducers({
-  counterReducer,
-  toDosReducer,
-});
 
 const enhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 
