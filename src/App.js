@@ -7,9 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/nav/Nav";
 import Products from "./views/Products";
 import ProductDetails from "./views/ProductsDetails";
+import ToDo from "./views/ToDo";
 function App() {
-  const [number, setNumber] = useState(parseFloat(0));
-
   return (
     <>
       <BrowserRouter>
@@ -18,10 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetails />} />
-          <Route
-            path="/counter"
-            element={<Counter number={number} setNumber={setNumber} />}
-          />
+          <Route path="/counter" element={<Counter />} />
+          <Route path="/todo" element={<ToDo />} />
         </Routes>
       </BrowserRouter>
     </>

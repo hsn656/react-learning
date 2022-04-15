@@ -1,23 +1,37 @@
-const Counter = ({ number, setNumber }) => {
-  const increment = () => {
-    setNumber(number + 1);
+import { useDispatch, useSelector } from "react-redux";
+import { decrement, increment } from "../redux/actions/counter";
+
+const Counter = () => {
+  const counter = useSelector((state) => state.counter);
+  const dispatch = useDispatch();
+
+  const incrementCounter = () => {
+    dispatch(increment());
   };
 
-  const decrement = () => {
-    if (number === 0) return;
-    setNumber(number - 1);
+  const decrementCounter = () => {
+    if (counter === 0) return;
+    dispatch(decrement());
   };
 
   return (
     <div className="my-3">
       <div className="btn-group">
-        <button onClick={decrement} type="button" className="btn btn-info ">
+        <button
+          onClick={decrementCounter}
+          type="button"
+          className="btn btn-info "
+        >
           -
         </button>
         <button type="button" className="btn btn-primary">
-          {number}
+          {counter}
         </button>
-        <button onClick={increment} type="button" className="btn btn-info ">
+        <button
+          onClick={incrementCounter}
+          type="button"
+          className="btn btn-info "
+        >
           +
         </button>
       </div>
