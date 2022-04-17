@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { decrement, increment } from "../redux/actions/counter";
 
 const Counter = () => {
-  const counter = useSelector((state) => state.counter);
+  const counter = useSelector((state) => state.counterReducer.counter);
   const dispatch = useDispatch();
 
   const incrementCounter = () => {
@@ -14,6 +14,7 @@ const Counter = () => {
     dispatch(decrement());
   };
 
+  console.log(counter);
   return (
     <div className="my-3">
       <div className="btn-group">

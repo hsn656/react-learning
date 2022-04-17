@@ -1,5 +1,5 @@
 import { ADD_TASK, REMOVE_TASK } from "../actions/todos";
-import { initialState } from "../index";
+import { initialState } from "../state";
 
 const toDosReducer = (state = initialState, action) => {
   switch (action.type) {

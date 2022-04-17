@@ -8,6 +8,8 @@ import Nav from "./components/nav/Nav";
 import Products from "./views/Products";
 import ProductDetails from "./views/ProductsDetails";
 import ToDo from "./views/ToDo";
+import RegisterForm from "./views/RegisterForm";
+
 function App() {
   return (
     <>
@@ -19,6 +21,7 @@ function App() {
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/counter" element={<Counter />} />
           <Route path="/todo" element={<ToDo />} />
+          <Route path="/form" element={<RegisterForm />} />
         </Routes>
       </BrowserRouter>
     </>
